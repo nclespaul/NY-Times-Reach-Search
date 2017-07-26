@@ -1,3 +1,5 @@
+// This sets up the database to store the saved articles.
+
 // Require Mongoose
 var mongoose = require('mongoose');
 

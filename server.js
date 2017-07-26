@@ -17,7 +17,7 @@ app.use(express.static(process.cwd() + '/public'));
 // Connect to localhost if not a production environment
 if(process.env.NODE_ENV == 'production'){
   // Gotten using `heroku config | grep MONGODB_URI` command in Command Line
-  mongoose.connect('mongodb://heroku_kbdv0v69:860jh71jd1iu5m5639gjr0gg9l@ds129028.mlab.com:29028/heroku_kbdv0v69');
+  mongoose.connect('mongodb://heroku_f5n59jjp:ec4gu049vrq5bnfgi6povt7njg@ds125113.mlab.com:25113/heroku_f5n59jjp');
 }
 else{
   mongoose.connect('mongodb://localhost/nytreact');

@@ -2,14 +2,14 @@
   "name": "ny_times_react",
   "version": "1.0.0",
   "description": "Uses the NY Times search api to query and display user search results, and save them to the database for later if desired.",
-  "main": "server.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
     "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nclespaul/NY-Times-React-Search.git"
+    "url": "https://github.com/nclespaul/NY-Times-React-Search.git"
   },
   "author": "Darrell Freeman",
   "license": "MIT",

@@ -1,14 +1,7 @@
-// Queries the NYT API for articles. 
-// Contains the user's search form.
-
-
 // Include React
 var React = require("react");
 
-// Create the Search Component
 var Query = React.createClass({
-
-  // Here we set a generic state
   getInitialState: function() {
     return {
       topic: "",
@@ -16,81 +9,51 @@ var Query = React.createClass({
       endYear: ""
     };
   },
-
-  // When a user submits...
-  _handleSubmit: function(event) {
-    // prevent the HTML from trying to submit a form if the user hits "Enter" instead of
-    // clicking the button
+  // Upon submitting,
+  Submit: function(event) {
     event.preventDefault();
-
     // Set the parent to have the search terms
-    this.props._setSearchFeilds(this.state.topic, this.state.startYear, this.state.endYear);
-
-    // Reset the search terms
-    // this.setState({topic: ""});
-    // this.setState({startYear: ""});
-    // this.setState({endYear: ""});
-    
+    this.props._setSearchFields(this.state.topic, this.state.startYear, this.state.endYear);  
   },
-
-  _handleTopicChange: function(e) {
+  Change: function(e) {
     this.setState({topic: e.target.value});
   },
-
-  _handleStartYearChange: function(e) {
+  startChange: function(e) {
     this.setState({startYear: e.target.value});
   },
-
-  _handleEndYearChange: function(e) {
+  endChange: function(e) {
     this.setState({endYear: e.target.value});
   },
-
-
-  // Here we render the Query User Form
+  // Render the Query component
   render: function() {
     return (
-
       <div className="panel panel-default center-block" style={ {width: "80%", align: "center"} }>
-
         <div className="panel-heading">
           <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Search</b></i></h3>
         </div>
-
         <div className="panel-body text-center">
-          <form role="form" onSubmit={this._handleSubmit}>
-
+          <form role="form" onSubmit={this.Submit}>
             <div className="form-group col-md-offset-4 col-md-4">
               <label htmlFor="topic" className="text-center">Topic</label>
-              <input type="text" className="form-control text-center" id="topic" onChange={this._handleTopicChange} />
+              <input type="text" className="form-control text-center" id="topic" onChange={this.Change} />
             </div>
-
             <br />
-
             <div className="form-group col-md-offset-4 col-md-4">
               <label htmlFor="startYear">Start Year</label>
-              <input type="text" className="form-control text-center" id="startYear" onChange={this._handleStartYearChange} />
+              <input type="text" className="form-control text-center" id="startYear" onChange={this.startChange} />
             </div>
-
             <br />
-
             <div className="form-group col-md-offset-4 col-md-4">
               <label htmlFor="endYear">End Year</label>
-              <input type="text" className="form-control text-center" id="endYear" onChange={this._handleEndYearChange} />
+              <input type="text" className="form-control text-center" id="endYear" onChange={this.endChange} />
             </div>
-
             <br />
-
             <button type="submit" className="btn col-md-offset-5 col-md-2" id="searchBtn" style={{background: "green", color: "white"}}>Search</button>
-
           </form>
         </div>
-
       </div>
-
     );
   }
 });
 
-
-// Export the component back for use in Main file
 module.exports = Query;
