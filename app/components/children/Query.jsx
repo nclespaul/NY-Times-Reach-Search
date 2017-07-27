@@ -24,12 +24,13 @@ var Query = React.createClass({
   endChange: function(e) {
     this.setState({endYear: e.target.value});
   },
-  // Render the Query component
+  // Render the Query User Form
   render: function() {
     return (
       <div className="panel panel-default center-block" style={ {width: "80%", align: "center"} }>
         <div className="panel-heading">
-          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Search</b></i></h3>
+          <h2 className="panel-title text-center" style={ {fontSize: "26px"} }><b>Search our database for articles of interest.</b></h2>
+          <h5 className="text-center">*All three fields are required</h5>
         </div>
         <div className="panel-body text-center">
           <form role="form" onSubmit={this.Submit}>
@@ -48,7 +49,7 @@ var Query = React.createClass({
               <input type="text" className="form-control text-center" id="endYear" onChange={this.endChange} />
             </div>
             <br />
-            <button type="submit" className="btn col-md-offset-5 col-md-2" id="searchBtn" style={{background: "green", color: "white"}}>Search</button>
+            <button type="submit" className="btn col-md-offset-5 col-md-2" id="searchBtn" style={{background: "#475892", color: "white"}}>Search</button>
           </form>
         </div>
       </div>

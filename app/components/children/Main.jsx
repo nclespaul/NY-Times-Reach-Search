@@ -53,7 +53,7 @@ var Main = React.createClass({
     return (
       <div className="container" style = { {backgroundColor: "white", borderStyle: "solid", borderWidth: "1px"} }>
         <div className="page-header">
-          <h1 className="text-center"><img style = { {width: "90%", paddingTop: "-10%" } } src = {"images/nytimes.png"} /></h1> 
+          <h1 className="text-center"><img style = { {width: "100%", paddingTop: "-10%"} } src = {"images/nytimes.png"} /></h1> 
           <h4 className="text-center">Use the "Search" function below to return articles of interest.  These articles can be clicked to retrieve the article for further reading, or saved for later.</h4>
         </div>
         <Query _setSearchFields = {this._setSearchFields} />

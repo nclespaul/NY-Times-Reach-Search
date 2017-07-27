@@ -31,7 +31,7 @@ var Saved = React.createClass({
     return (
       <div className="panel panel-default center-block" style={ {width: "80%", align: "center"} }>
         <div className="panel-heading">
-          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Saved Articles</b></i></h3>
+          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><b>Your Saved Articles</b></h3>
         </div>
         <div className="panel-body">
           <ul className="list-group col-md-10 col-md-offset-1">
@@ -45,7 +45,7 @@ var Saved = React.createClass({
                       <i style={ {float: "right"} }> {search.date.substring(0, 10)}</i>
                     </div>
                     <span className="input-group-btn">
-                      <button className="btn btn-danger" type="button" onClick={that._handleDelete} value={search._id}>Remove</button>
+                      <button className="btn" type="button" onClick={that._handleDelete} value={search._id} style={{background: "#B13C3C", color: "white"}}>Remove</button>
                     </span>
                   </div>
                 </li>

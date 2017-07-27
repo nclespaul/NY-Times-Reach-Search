@@ -42,7 +42,7 @@ var Search = React.createClass({
     return (
       <div className="panel panel-default center-block" style={ {width: "80%", align: "center"} }>
         <div className="panel-heading">
-          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><i><b>Results</b></i></h3>
+          <h3 className="panel-title text-center" style={ {fontSize: "20px"} }><b>Search Results</b></h3>
         </div>
         <div className="panel-body">
           <ul className="list-group col-md-10 col-md-offset-1">
@@ -63,7 +63,7 @@ var Search = React.createClass({
                       <i style={ {float: "right"} }> {search.pub_date.substring(0, 10)}</i>
                     </div>       
                     <span className="input-group-btn">
-                      <button className="btn btn-success" type="button" style={ {background: "green"} }onClick={that._handleSave} value={search._id}>Save</button>
+                      <button className="btn" type="button" style={ {background: "#359061", color: "white"} }onClick={that._handleSave} value={search._id}>Save</button>
                     </span>
                   </div>
                 </li>
