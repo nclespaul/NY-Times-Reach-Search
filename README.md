@@ -5,7 +5,7 @@
 NPM's (axios, body-parser, express, mongoose, morgan, react, react-dom, react-router), Dev Dependencies (babel-core, babel-loader, babel-preset-es2015, babel-preset-react, webpack)
 - Website URL:  
 
-This is a React-based web scraper that queries and displays articles from the NY Times using their New York Times Article Search API
+This is a React-based web scraper that queries and displays articles from the NY Times using [New York Times Article Search API](http://developer.nytimes.com/).
 
 
 # :newspaper: NY Times ReactJS App :statue_of_liberty:
