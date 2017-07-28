@@ -3,23 +3,18 @@
 - Date: 07/25/17
 - Tools Used:  HTML5, CSS, Bootstrap, Javascript, Node.js, React.js, MongoDB, Express, Heroku, NY Times API,           
 NPM's (axios, body-parser, express, mongoose, morgan, react, react-dom, react-router), Dev Dependencies (babel-core, babel-loader, babel-preset-es2015, babel-preset-react, webpack)
-- Website URL:  
+- Website URL:  https://mynytimessearch.herokuapp.com/
 
-This is a React-based web scraper that uses the [New York Times Article Search API](http://developer.nytimes.com/). to query and display articles that interest the user.  The app has an option to allow the user to save articles for later.  The query returns clickable links that retrieve the article for immediate reading if desired.   
+![Query Articles](/public/images/screenshot.png)
 
-
-# :newspaper: NY Times ReactJS App :statue_of_liberty:
-A `NodeJS`, `MongoDB`, `Express`, and `ReactJS` application where users can query, display, and save articles from the [New York Times Article Search API](http://developer.nytimes.com/). Users can remove saved articles as well.
-
-Please check out the deployed version in Heroku [here](https://ny-times-react.herokuapp.com/)!
-
-Click on the headlines to be re-directed to the full New York Times articles.
-
+This is a React-based web scraper that uses the [New York Times Article Search API](http://developer.nytimes.com/) to query and display articles that interest the user.  The query returns clickable links that retrieve the article for immediate reading if desired, or the articles can be saved to the database for perusal later.    
 
 ## Functionality
+The frontend uses `ReactJS` for rendering components, `axios` for internal/external API calls, and `bootstrap` as a styling framework.
+
 On the backend, the app uses `express` to serve routes and `mongoose` to interact with a `MongoDB` database.
 
-On the frontend, the app uses `ReactJS` for rendering components, `axios` for internal/external API calls, and `bootstrap` as a styling framework.
+
 
 In order to transpile the JSX code, `webpack` and `babel` were utilized. All of the JSX  code in the `/app` folder was transpiled into the `bundle.js` file located in the `/public` folder.
 
